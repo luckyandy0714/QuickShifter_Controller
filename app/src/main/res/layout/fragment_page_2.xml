@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".page_2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/layout_border_2"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/gear_time_lab_0"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="中斷點火"
+                                android:textColor="#00B500"
+                                android:textSize="28sp"
+                                app:layout_constraintBottom_toTopOf="@+id/gear_time"
+                                app:layout_constraintStart_toStartOf="@+id/gear_time" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:orientation="horizontal">
+
+                                <EditText
+                                    android:id="@+id/edittext_cut_time"
+                                    android:layout_width="70dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="#FFFFFF"
+                                    android:digits="-1234567890"
+                                    android:ems="10"
+                                    android:gravity="end"
+                                    android:imeOptions="actionDone"
+                                    android:inputType="phone"
+                                    android:maxLength="3"
+                                    android:selectAllOnFocus="true"
+                                    android:text="0"
+                                    android:textColor="#000000"
+                                    android:textSize="40sp" />
+
+                                <TextView
+                                    android:id="@+id/ms_lab_0"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="ms"
+                                    android:textColor="#00B500"
+                                    android:textSize="24dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/button_cut_time_up"
+                                android:layout_width="60dp"
+                                android:layout_height="50dp"
+                                android:backgroundTint="#FF0000"
+                                app:srcCompat="@android:drawable/arrow_up_float" />
+
+                            <ImageButton
+                                android:id="@+id/button_cut_time_down"
+                                android:layout_width="60dp"
+                                android:layout_height="50dp"
+                                android:backgroundTint="#00FF00"
+                                app:srcCompat="@android:drawable/arrow_down_float" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:background="#FFFF00" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="平滑時間(PWM)"
+                            android:textColor="#FF0000"
+                            android:textSize="24sp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/edittext_cut_smooth_time"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:background="#FFFFFF"
+                                android:digits="-1234567890"
+                                android:ems="10"
+                                android:gravity="end"
+                                android:imeOptions="actionDone"
+                                android:inputType="phone"
+                                android:maxLength="3"
+                                android:selectAllOnFocus="true"
+                                android:text="0"
+                                android:textColor="#000000"
+                                android:textSize="36sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ms"
+                                android:textColor="#FF0000"
+                                android:textSize="24sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:background="@drawable/layout_border_2"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="穩定延遲"
+                            android:textColor="#FF0000"
+                            android:textSize="24sp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:orientation="horizontal"
+                            tools:ignore="RtlHardcoded">
+
+                            <EditText
+                                android:id="@+id/edittext_stable_delay_1"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:background="#FFFFFF"
+                                android:digits="-1234567890"
+                                android:ems="10"
+                                android:gravity="end"
+                                android:imeOptions="actionDone"
+                                android:inputType="phone"
+                                android:maxLength="3"
+                                android:selectAllOnFocus="true"
+                                android:text="0"
+                                android:textColor="#000000"
+                                android:textSize="32sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ms"
+                                android:textColor="#FF0000"
+                                android:textSize="24sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:background="#FFFF00" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="中斷後延遲"
+                            android:textColor="#FF0000"
+                            android:textSize="24sp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:orientation="horizontal"
+                            tools:ignore="RtlHardcoded">
+
+                            <EditText
+                                android:id="@+id/edittext_stable_delay_2"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:background="#FFFFFF"
+                                android:digits="-1234567890"
+                                android:ems="10"
+                                android:gravity="end"
+                                android:imeOptions="actionDone"
+                                android:inputType="phone"
+                                android:maxLength="3"
+                                android:selectAllOnFocus="true"
+                                android:text="0"
+                                android:textColor="#000000"
+                                android:textSize="32sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ms"
+                                android:textColor="#FF0000"
+                                android:textSize="24sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:background="#FFFF00" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="引擎啟動延遲"
+                            android:textColor="#FF0000"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:orientation="horizontal"
+                            tools:ignore="RtlHardcoded">
+
+                            <EditText
+                                android:id="@+id/edittext_engine_start_delay"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:background="#FFFFFF"
+                                android:digits="-1234567890"
+                                android:ems="10"
+                                android:gravity="end"
+                                android:imeOptions="actionDone"
+                                android:inputType="phone"
+                                android:maxLength="4"
+                                android:selectAllOnFocus="true"
+                                android:text="0"
+                                android:textColor="#000000"
+                                android:textSize="32sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ms"
+                                android:textColor="#FF0000"
+                                android:textSize="24sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:background="@drawable/layout_border_2"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="檔桿觸發"
+                            android:textColor="#E69200"
+                            android:textSize="22sp" />
+
+                        <ToggleButton
+                            android:id="@+id/button_gear_scale_invert"
+                            android:layout_width="match_parent"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_height="45dp"
+                            android:background="@drawable/togglebutton_selector"
+                            android:textColor="@color/black"
+                            android:textOff="正向"
+                            android:textOn="反向"
+                            android:textSize="30sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:background="#FFFF00" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/sensitivity_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="靈敏度"
+                            android:textColor="#E69200"
+                            android:textSize="24sp" />
+
+                        <EditText
+                            android:id="@+id/edittext_gear_scale_sensitivity"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:background="#FFFFFF"
+                            android:digits="-1234567890"
+                            android:layout_gravity="center"
+                            android:ems="10"
+                            android:gravity="end"
+                            android:imeOptions="actionDone"
+                            android:inputType="phone"
+                            android:maxLength="3"
+                            android:selectAllOnFocus="true"
+                            android:text="0"
+                            android:textColor="#000000"
+                            android:textSize="30sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:background="#FFFF00" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="觸發值"
+                            android:textColor="#E69200"
+                            android:textSize="24sp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end">
+
+                            <EditText
+                                android:id="@+id/edittext_cut_valve"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:background="#FFFFFF"
+                                android:digits="-1234567890"
+                                android:ems="10"
+                                android:gravity="end"
+                                android:imeOptions="actionDone"
+                                android:inputType="phone"
+                                android:maxLength="3"
+                                android:selectAllOnFocus="true"
+                                android:text="100"
+                                android:textColor="#000000"
+                                android:textSize="30sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="%"
+                                android:textColor="#FFFFFF"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="5dp"
+                android:background="#FFFF00" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/layout_border_2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="檔位增益補償(1~5)"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:id="@+id/G_gain_map_lab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:orientation="horizontal" />
+
+                <LinearLayout
+                    android:id="@+id/G_gain_map_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" />
+
+                <LinearLayout
+                    android:id="@+id/G_gain_map_seekbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

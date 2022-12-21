@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".page_1">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/S_progressBar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:progress="1"
+            android:progressBackgroundTint="#00FFFFFF"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="#2EA9DF"
+            app:layout_constraintBottom_toBottomOf="@+id/S_progressBar" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/layout_border_1"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/S_progressBar">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/S_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="引擎轉速:"
+                    android:textColor="#FBE251"
+                    android:textSize="40sp" />
+
+                <TextView
+                    android:id="@+id/textview_S"
+                    android:layout_width="145dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="0"
+                    android:textColor="#FBE251"
+                    android:textSize="50sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#2EA9DF" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/T_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="油門開度:"
+                    android:textColor="#5DAC81"
+                    android:textSize="40sp" />
+
+                <TextView
+                    android:id="@+id/textview_T"
+                    android:layout_width="145dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="0%"
+                    android:textColor="#5DAC81"
+                    android:textSize="50sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#2EA9DF" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/sensor_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="檔桿壓力:"
+                    android:textColor="#78C2C4"
+                    android:textSize="40sp" />
+
+                <TextView
+                    android:id="@+id/textview_Sensor"
+                    android:layout_width="145dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="0%"
+                    android:textColor="#78C2C4"
+                    android:textSize="50sp" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:background="@drawable/layout_border_1"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout"
+            app:layout_constraintTop_toTopOf="@+id/linearLayout">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Enable"
+                android:textColor="#86C166"
+                android:textSize="20sp" />
+
+            <ToggleButton
+                android:id="@+id/button_cut_enable"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+                android:background="@drawable/togglebutton_selector"
+                android:textColor="@color/black"
+                android:textOff="停用"
+                android:textOn="啟用"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/textview_G"
+                android:layout_width="60dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="N"
+                android:textColor="#000000"
+                android:textSize="80sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_border_1"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/textview_cut_detail_1"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="S:0\nT:0%\nG:0\nC:0ms"
+                    android:textColor="#FFAA33"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="#2EA9DF" />
+
+                <TextView
+                    android:id="@+id/textview_cut_detail_2"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:text="S_Gain:0%\nT_Gain:0%\nG_Gain:0%\nA_Gain:0%"
+                    android:textColor="#FFAA33"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="3dp"
+                android:background="@drawable/layout_border_1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/cut_test_lab"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="中斷點火\n測試"
+                        android:textColor="#FFFF00"
+                        android:textSize="24sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/edittext_cut_test_time"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:background="#FFFFFF"
+                            android:digits="-1234567890"
+                            android:ems="10"
+                            android:gravity="end"
+                            android:imeOptions="actionDone"
+                            android:inputType="phone"
+                            android:maxLength="3"
+                            android:selectAllOnFocus="true"
+                            android:text="80"
+                            android:textColor="#000000"
+                            android:textSize="30sp" />
+
+                        <TextView
+                            android:id="@+id/ms_lab_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ms"
+                            android:textColor="#FFFF00"
+                            android:textSize="20sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/cut_test_time"
+                            app:layout_constraintStart_toEndOf="@+id/cut_test_time" />
+
+                        <ImageButton
+                            android:id="@+id/button_cut_test"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:backgroundTint="#FF1B45"
+                            app:srcCompat="?attr/actionModeCutDrawable" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+            <TextView
+                android:id="@+id/log"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/layout_border_1"
+                android:scrollbars="vertical"
+                android:text="\n"
+                android:textColor="#03FA0D"
+                android:textSize="20sp"
+                tools:layout_editor_absoluteX="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_clear_log"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:backgroundTint="@android:color/holo_orange_light"
+                    android:text="清除"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/write_command"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:gravity="end"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:selectAllOnFocus="true"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textSize="30sp" />
+
+                <ImageButton
+                    android:id="@+id/button_send_command"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@android:drawable/ic_menu_send"
+                    app:tint="@android:color/holo_blue_bright" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

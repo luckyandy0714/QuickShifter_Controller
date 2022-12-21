@@ -4,7 +4,7 @@ plugins {
 android.applicationVariants.all {
     variant ->
         variant.outputs.all {
-            outputFileName = "QuickShifter_Controller${buildType.name}_V${versionName}.apk"
+            outputFileName = "QuickShifter_Controller_${buildType.name}_V${versionName}.apk"
         }
 }
 android {

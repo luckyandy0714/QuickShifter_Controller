@@ -18,8 +18,7 @@
             android:layout_height="30dp"
             android:progress="1"
             android:progressBackgroundTint="#00FFFFFF"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView"
@@ -238,6 +237,7 @@
                             android:id="@+id/edittext_cut_test_time"
                             android:layout_width="40dp"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
                             android:background="#FFFFFF"
                             android:digits="-1234567890"
                             android:ems="10"
@@ -248,12 +248,13 @@
                             android:selectAllOnFocus="true"
                             android:text="80"
                             android:textColor="#000000"
-                            android:textSize="30sp" />
+                            android:textSize="24sp" />
 
                         <TextView
                             android:id="@+id/ms_lab_2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
                             android:text="ms"
                             android:textColor="#FFFF00"
                             android:textSize="20sp"

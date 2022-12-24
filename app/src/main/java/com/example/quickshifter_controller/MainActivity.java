@@ -184,6 +184,7 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     Thread.sleep(100);
                     bluetooth.WriteLine("w0");
+                    Thread.sleep(100);
                     StringBuilder write_buffer_String = new StringBuilder();
                     for (int i = 0; i < SETDATA_SIZE; i++)
                         write_buffer_String.append(write_buffer[i]).append(",");

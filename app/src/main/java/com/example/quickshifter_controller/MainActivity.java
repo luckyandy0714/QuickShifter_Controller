@@ -163,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
             updating = true;
             Set_BusyBar(true);
             new Thread(() -> {
-                bluetooth.WriteLine("m0");
+                //bluetooth.WriteLine("m0");
 
                 int[] write_buffer = new int[SETDATA_SIZE];
                 Get_SetData_Array(write_buffer);

@@ -192,18 +192,10 @@ public class MainActivity extends AppCompatActivity {
                     /*for (int i = 0; i < SETDATA_SIZE; i++)
                         bluetooth.Write(write_buffer[i] + ",");
                     bluetooth.WriteLine("!");*/
-                    Thread.sleep(3000);
-                    bluetooth.WriteLine("w1");
-                    Thread.sleep(200);
-                    bluetooth.WriteLine("k0");
-                    Thread.sleep(1500);
-
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                this.runOnUiThread(() -> Toast.makeText(this, "上傳完畢", Toast.LENGTH_SHORT).show());
-                Set_BusyBar(false);
-                updating = false;
+                //this.runOnUiThread(() -> Toast.makeText(this, "上傳完畢", Toast.LENGTH_SHORT).show());
             }).start();
         });
         button_setting_page.setOnClickListener((view) -> {
@@ -449,6 +441,17 @@ public class MainActivity extends AppCompatActivity {
                         bluetooth.WriteLine("r1");
                         bluetooth.WriteLine("l1");
                         bluetooth.WriteLine("m1");
+                        Set_BusyBar(false);
+                        updating = false;
+                        break;
+                    case "E":
+                        if (!read_data.substring(0, 3).equals("ERR"))
+                            break;
+                        bluetooth.WriteLine("r1");
+                        bluetooth.WriteLine("l1");
+                        bluetooth.WriteLine("m1");
+                        Set_BusyBar(false);
+                        updating = false;
                         break;
                     case "c":
                         if (data.length != 8)

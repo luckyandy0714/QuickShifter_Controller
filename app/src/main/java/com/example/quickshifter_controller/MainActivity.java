@@ -190,7 +190,7 @@ public class MainActivity extends AppCompatActivity {
                     write_buffer_String.append("!");
                     bluetooth.WriteLine(write_buffer_String.toString());*/
                     for (int i = 0; i < SETDATA_SIZE; i++)
-                        bluetooth.Write(write_buffer.toString() + ",");
+                        bluetooth.Write(write_buffer[i] + ",");
                     bluetooth.WriteLine("!");
                     Thread.sleep(100);
                     bluetooth.WriteLine("w1");

@@ -182,7 +182,7 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
                 try {
-                    //Thread.sleep(200);
+                    Thread.sleep(1);
                     bluetooth.WriteLine("w0");
                     Thread.sleep(1);
                     StringBuilder write_buffer_String = new StringBuilder();

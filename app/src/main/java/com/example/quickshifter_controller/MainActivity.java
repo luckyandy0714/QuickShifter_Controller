@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         myViewPager.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);
         myViewPager.setOffscreenPageLimit(3);
         myViewPager.setAdapter(myAdapter);
-        myViewPager.setCurrentItem(1,false);
+        myViewPager.setCurrentItem(1, false);
         new TabLayoutMediator(findViewById(R.id.tab_layout), myViewPager, (tab, position) -> {
             tab.setText((new String[]{"Setup", "Monitor", "Time Gain"})[position]);
         }).attach();
@@ -184,11 +184,14 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     Thread.sleep(100);
                     bluetooth.WriteLine("w0");
-                    StringBuilder write_buffer_String = new StringBuilder();
+/*                    StringBuilder write_buffer_String = new StringBuilder();
                     for (int i = 0; i < SETDATA_SIZE; i++)
                         write_buffer_String.append(write_buffer[i]).append(",");
                     write_buffer_String.append("!");
-                    bluetooth.WriteLine(write_buffer_String.toString());
+                    bluetooth.WriteLine(write_buffer_String.toString());*/
+                    for (int i = 0; i < SETDATA_SIZE; i++)
+                        bluetooth.Write(write_buffer.toString() + ",");
+                    bluetooth.WriteLine("!");
                     Thread.sleep(100);
                     bluetooth.WriteLine("w1");
                     Thread.sleep(100);

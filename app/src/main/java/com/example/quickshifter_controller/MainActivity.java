@@ -184,17 +184,17 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     Thread.sleep(100);
                     bluetooth.WriteLine("w0");
-/*                    StringBuilder write_buffer_String = new StringBuilder();
+                    StringBuilder write_buffer_String = new StringBuilder();
                     for (int i = 0; i < SETDATA_SIZE; i++)
                         write_buffer_String.append(write_buffer[i]).append(",");
                     write_buffer_String.append("!");
-                    bluetooth.WriteLine(write_buffer_String.toString());*/
-                    for (int i = 0; i < SETDATA_SIZE; i++)
+                    bluetooth.WriteLine(write_buffer_String.toString());
+                    /*for (int i = 0; i < SETDATA_SIZE; i++)
                         bluetooth.Write(write_buffer[i] + ",");
-                    bluetooth.WriteLine("!");
-                    Thread.sleep(100);
+                    bluetooth.WriteLine("!");*/
+                    Thread.sleep(300);
                     bluetooth.WriteLine("w1");
-                    Thread.sleep(100);
+                    Thread.sleep(300);
                     bluetooth.WriteLine("k0");
                     Thread.sleep(1500);
 

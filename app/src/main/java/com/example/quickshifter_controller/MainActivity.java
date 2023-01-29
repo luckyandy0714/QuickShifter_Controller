@@ -796,7 +796,7 @@ public class MainActivity extends AppCompatActivity {
             if (hasFocus)
                 return;
             int data = Integer.parseInt(((EditText) view).getText().toString().trim());
-            engine_start_delay = Math.max(Math.min(data / 10, 200), 10);
+            engine_start_delay = Math.max(Math.min(data / 10, 200), 0);
             ((EditText) view).setText((engine_start_delay * 10) + "");
             Toast.makeText(MainActivity.this, "engine_start_delay set : " + (engine_start_delay * 10), Toast.LENGTH_SHORT).show();
         });

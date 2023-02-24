@@ -223,6 +223,7 @@ public class BluetoothConnect {
                         }
                         ((Activity) context).runOnUiThread(arrayAdapter::notifyDataSetChanged);
                     } catch (Exception e) {
+                        bluetooth_mac_flag = false;
                         return;
                     }
                     try {
@@ -247,6 +248,9 @@ public class BluetoothConnect {
                         SelectMacCallBack.onSelectChanged(Bluetooth_Address);
                         if (different)
                             Start_Connect();
+                        else {
+
+                        }
                         Toast.makeText(context, "MAC:" + Bluetooth_Address, Toast.LENGTH_SHORT).show();
                         bluetooth_mac_flag = false;
                     })
@@ -297,6 +301,7 @@ public class BluetoothConnect {
     }
 
     public void Start_Connect() {
+        Cancel();
         connect_thread = new Thread(this::connect);
         try {
             connect_thread.start();

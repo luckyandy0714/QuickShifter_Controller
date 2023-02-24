@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
     page_1 page_1 = new page_1();
     page_2 page_2 = new page_2();
     page_3 page_3 = new page_3();
-
+    ViewPager2 myViewPager;
     void setup() {
         this.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);//關閉螢幕維持
         this.getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);//維持開啟
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         myAdapter.addFragment(page_1);
         myAdapter.addFragment(page_3);
 
-        ViewPager2 myViewPager = findViewById(R.id.My_viewpager);
+        myViewPager = findViewById(R.id.My_viewpager);
         myViewPager.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);
         myViewPager.setOffscreenPageLimit(3);
         myViewPager.setAdapter(myAdapter);
@@ -444,6 +444,7 @@ public class MainActivity extends AppCompatActivity {
                         bluetooth.WriteLine("m1");
                         Set_BusyBar(false);
                         updating = false;
+                        myViewPager.setCurrentItem(1, false);
                         break;
                     case "E":
                         if (!read_data.substring(0, 3).equals("ERR"))
